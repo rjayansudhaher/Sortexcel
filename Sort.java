@@ -42,31 +42,7 @@ public class Sort {
 	        
 	        boolean sorting = true;
 	        int lastRow = sheet.getLastRowNum();
-	        /*while (sorting == true) {
-	            sorting = false;
-	            for (Row row : sheet) {
-	                // skip if this row is before first to sort
-	                if (row.getRowNum()<0) continue;
-	                // end if this is last row
-	                if (lastRow==row.getRowNum()) break;
-	                Row row2 = sheet.getRow(row.getRowNum()+1);
-	                if (row2 == null) continue;
-	                String firstValue = (row.getCell(6) != null) ? row.getCell(6).getStringCellValue() : "";
-	                String secondValue = (row2.getCell(6) != null) ? row2.getCell(6).getStringCellValue() : "";
-	                //compare cell from current row and next row - and switch if secondValue should be before first
-	                
-	                System.out.println("@@"+secondValue);
-	                System.out.println("##"+firstValue);
-	                if (secondValue.compareToIgnoreCase(firstValue)<0) {  
-	                	
-	                	System.out.println("sooooooort");
-	                    sheet.shiftRows(row2.getRowNum(), row2.getRowNum(), -1);
-	                    sheet.shiftRows(row.getRowNum(), row.getRowNum(), 1);
-	                    sorting = true;
-	                }
-	            }
-	        }
-	        */
+	        
 	        
 	        try{
 	        	for(int j=1; j<=sheet.getLastRowNum();j++){
